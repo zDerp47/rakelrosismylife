@@ -41,3 +41,34 @@ function readyPress(){
     document.getElementById("message").textContent = "Look at me babygirl 💚💜"
 
 }
+
+document.getElementById('yesButton').addEventListener('click', function() {
+    // Display a positive message
+    document.getElementById("poem-section").style.background = bgColors[1];
+    document.getElementById('message').innerText = 'I love you so much, sorry for being goofy with asking all the time ahahaha! 💚💜';
+    document.getElementById('message').style.display = 'block';
+    
+    // Disable both buttons after Yes is clicked
+    document.getElementById('yesButton').disabled = true;
+    document.getElementById('noButton').disabled = true;
+    
+    // Add animation to the message
+    document.getElementById('message').style.animation = 'fadeInMessage 1s ease-in-out';
+    
+    // Add confetti animation or other effects here if you want.
+
+    createHeartCaller();
+    createHeartCaller();
+    createHeartCaller();
+    createHeartCaller();
+    createHeartCaller();
+    createHeartCaller();
+});
+
+document.getElementById('noButton').addEventListener('click', function() {
+    document.getElementById('noButton').style.animation = 'disappear 1s ease-out forwards';
+    
+    // Disable the No button to prevent further clicks
+    document.getElementById('noButton').disabled = true;
+});
+

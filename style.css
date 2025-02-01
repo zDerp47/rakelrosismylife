@@ -185,6 +185,98 @@ hr {
     }
 }
 
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #8a2be2; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c1cb2; /* Darker purple */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.no-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #8a2be2; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.no-button:hover {
+    background-color: #6c1cb2; /* Darker purple */
+    animation: shake 0.5s ease-out 0s infinite;
+}
+
+.message {
+    font-size: 1.5rem;
+    color: #6a1b9a;
+    margin-top: 20px;
+    display: none;
+    animation: fadeInMessage 1s ease-in-out;
+    font-weight: bold;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
 /* Cute Poem Container */
 .poem-container {
     background: linear-gradient(to bottom right, #bcffb6, #e3ffe1);
